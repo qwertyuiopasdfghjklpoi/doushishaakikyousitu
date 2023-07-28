@@ -1,0 +1,12 @@
+# config/locales/ja.yml
+ja:
+  activerecord:
+    attributes:
+      room:
+        post: "投稿内容"
+    errors:
+      models:
+        room:
+          attributes:
+            post:
+              blank: "が空白です"

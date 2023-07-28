@@ -1,0 +1,301 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+/* 親要素でタブの横並びのためflexを指定
+*/
+/**************************
+ タブ切り替え
+***************************/
+
+/* 親要素でタブの横並びのためflexを指定
+*/
+
+
+
+
+.tab-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin:5px 0;
+  
+}
+
+h1{
+  text-align: center;
+}
+
+p {
+  text-align: right;
+}
+
+.alarm{
+  text-align: center;
+}
+
+.error_explanation{
+  text-align: center;
+}
+
+
+.created_at{
+  text-align: right;
+}
+
+h3{
+  text-align: center;
+}
+
+.field{
+  text-align: center;
+}
+.new{
+  text-align: right;
+  margin-top: -5px;
+  margin-right: 7px;
+  justify-content: space-between;
+}
+
+.post.btn {
+  color:white;
+  padding:8px 24px;
+  display:inline-block;
+  border-radius:4px;
+  opacity:0.8;
+  background-color:#2899c6;
+  margin:30px 0px 15px 0px;
+  text-decoration: none;
+  box-shadow: 0 7px #19055a;
+
+  
+}
+.return.btn {
+  color:rgb(0, 0, 0);
+  padding:8px 24px;
+  display:inline-block;
+  border-radius:4px;
+  opacity:0.8;
+  background-color:lightgray;
+  margin:30px 15px 15px 0px;
+  text-decoration: none;
+  position: relative; 
+  box-shadow: 0 7px #515052;
+  
+  
+}
+.sub.btn {
+  font-size: 15px;
+  color:white;
+  padding:8px 45px;
+  display:inline-block;
+  border-radius:4px;
+  opacity:0.8;
+  background-color:#2899c6;
+  margin:30px 0px 15px 0px;
+  text-decoration: none;
+  position: relative;
+  top: -1px;
+  border: none;
+  box-shadow: 0 7px #19055a;
+  
+}
+
+.btn:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+.post-container{
+  text-align: center;
+  margin-top: -45px;
+}
+
+.posts-container{
+  overflow-y: scroll;
+  border: thick double #32a1ce;
+  border-radius:10px;
+}
+
+.tweet{
+  background-color: #e7e7e8;
+  margin: 10px;
+  border-radius:5px;
+  
+}
+
+.post-item{
+  position: relative;
+  left: 3px;
+}
+
+.created_at{
+  position: relative;
+  right: 3px;
+}
+/* タブ１～３と書いているタブメニュー部分
+*/
+.tab-label {
+  color: White;
+  background-color:lightgray;
+  text-align: center;
+  padding: .5em 1em;
+  order: -1;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  flex: 1;
+  border-radius:3px;
+}
+
+.tab-label:not(:last-of-type) {
+  margin-right: 5px;
+}
+
+/* タブのコンテンツ部分*/
+.tab-content {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+/* アクティブなタブ、チェックされているradioボタンの隣にあるlabelの背景色を変える*/
+.tab-switch:checked+.tab-label {
+ background-color:#999fad;/*背景色*/
+}
+
+.tab-switch:checked+.tab-label:after{
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: calc(50% + 5px);
+	margin-left: -15px;
+	border: 10px solid transparent;
+  border-top:10px solid #999fad;
+	width: 0;
+	height: 0;
+}
+
+.tab-switch:checked+.tab-label+.tab-content {
+  height: auto;
+  overflow: auto;
+  padding: 15px 0 0 0;
+  opacity: 1;
+  transition: .5s opacity;
+}
+
+/* radioボタンは仕組みだけ利用するため非表示に*/
+.tab-switch {
+  display: none;
+}
+
+.campus{
+  border: solid;
+  margin-bottom: 15px;
+}
+
+// .roomclass{
+//   flex-direction:column;
+
+
+// }
+
+// .floorclass-box{
+//   display: flex;
+  
+//   flex-wrap: wrap;
+//   background-color:lightgray;
+//   margin:5px;
+//   border-radius:3px;
+//   padding: 5px;
+//   justify-content: space-between;
+  
+// }
+
+
+
+
+
+// .floorclass-item.n{
+//   background-color:rgb(253, 103, 103);
+  
+
+
+
+// }
+// .floorclass-item.y{
+//   background-color:rgb(112, 246, 112);
+//   margin-right: 30px;
+  
+
+// }
+
+
+
+
+
+// .floorclass-item{
+//    margin-right:5px;
+//    border-radius: 3px;
+// }
+
+//GDP 1
+// .roomclass {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .floorclass-box {
+//   display: flex;
+//   flex-wrap: wrap;
+//   background-color: lightgray;
+//   margin: 5px;
+//   border-radius: 3px;
+//   padding: 5px;
+//   justify-content: flex-start;
+// }
+
+// .floorclass-item.n {
+//   background-color: rgb(253, 103, 103);
+// }
+
+// .floorclass-item.y {
+//   background-color: rgb(112, 246, 112);
+//   margin-right: 30px;
+// }
+
+// .floorclass-item {
+//   margin-right: 5px;
+//   border-radius: 3px;
+// }
+
+.roomclass {
+  display: flex;
+  flex-direction: column;
+}
+
+.floorclass-box {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: lightgray;
+  margin: 5px;
+  border-radius: 3px;
+  padding: 5px 5px 0px 5px;
+}
+
+.floorclass-item.n {
+  background-color: rgb(253, 103, 103);
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+
+.floorclass-item.y {
+  background-color: rgb(112, 246, 112);
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+
+
+

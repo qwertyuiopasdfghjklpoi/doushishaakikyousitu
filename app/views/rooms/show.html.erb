@@ -1,0 +1,10 @@
+<h1>GeekTwitter</h1>
+<h3>room詳細</h3>
+<div class="room">
+  <p><%= @room.post %></p>
+  <p><%= @room.created_at %></p>
+  
+</div>
+<%= link_to "編集する", edit_room_path(@room.id) %>
+
+<%= link_to "room一覧に戻る", rooms_path %>

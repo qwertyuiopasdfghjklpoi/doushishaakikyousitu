@@ -1,0 +1,22 @@
+
+<h3>訂正などあればこちらから<br>お書き込みください</h3>
+<p class="alarm">※投稿した内容を編集、削除することはできません</p>
+
+<%= form_for @room do |f| %>
+  <% if @room.errors.any? %>
+    <div>
+      <p class="error_explanation">※内容を入力してください</p>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_area :post, :size => "50x5" %>
+  </div>
+  <div class="new">
+    <%= link_to "一覧に戻る", rooms_path, class: 'return btn' %>
+    <%= f.submit "投稿", class: 'sub btn' %>
+  </div>
+<% end %>
+
+
+
